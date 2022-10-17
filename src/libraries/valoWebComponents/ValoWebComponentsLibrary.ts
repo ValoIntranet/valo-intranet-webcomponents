@@ -1,5 +1,6 @@
 import { IWebComponentProvider, IWebComponentDefinition } from '@valo/extensibility';
-import { CustomComponentWebComponent } from './components';
+import { HelloComponentWC, SpinnerWC } from './components';
+import { CardWC } from './components/CardComponent';
 
 export class ValoWebComponentsLibrary implements IWebComponentProvider {
 
@@ -9,8 +10,16 @@ export class ValoWebComponentsLibrary implements IWebComponentProvider {
   public getWebComponents(): IWebComponentDefinition<any>[] {
     return [
       {
-        name: 'custom-component',
-        class: CustomComponentWebComponent
+        name: 'hello-wc',
+        class: HelloComponentWC
+      },
+      {
+        name: 'spinner-wc',
+        class: SpinnerWC
+      },
+      {
+        name: 'card-wc',
+        class: CardWC
       }
     ];
   }
