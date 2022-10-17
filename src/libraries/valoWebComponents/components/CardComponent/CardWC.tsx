@@ -16,7 +16,7 @@ export class CardWC extends BaseWebComponent {
     // You can use this._ctx here to access current Web Part context
     const cardProps: ICardComponentProps = this.resolveAttributes() as ICardComponentProps;
     
-    const customComponent = <CardComponent {...cardProps} />
+    const customComponent = <CardComponent {...cardProps} />;
     ReactDOM.render(customComponent, this);
   }
 }
