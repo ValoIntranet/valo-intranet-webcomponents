@@ -3,14 +3,14 @@ import { Stack, DocumentCardDetails, DocumentCard, DocumentCardTitle, ImageFit, 
 import { ICardComponentProps } from "./ICardComponentProps";
 import { documentCardStyles, documentCardDetails } from './CardComponentStyles';
 
-export const CardComponent: React.FunctionComponent<ICardComponentProps> = (props: React.PropsWithChildren<ICardComponentProps>) => {
+export const CompactCardComponent: React.FunctionComponent<ICardComponentProps> = (props: React.PropsWithChildren<ICardComponentProps>) => {
   const { title, description, imageUrl, linkUrl } = props;
+  debugger;
   const documentPreviewProps: IDocumentCardPreviewProps = {
     previewImages: [
       {
         previewImageSrc: imageUrl,
-        imageFit: ImageFit.cover,
-        height: 152,
+        width: 156,
       },
     ]
   };
@@ -18,10 +18,12 @@ export const CardComponent: React.FunctionComponent<ICardComponentProps> = (prop
   return (
     <>
       <Stack>
-        <DocumentCard styles={documentCardStyles} onClickHref={linkUrl} >
+        <DocumentCard onClickHref={linkUrl} type={DocumentCardType.compact}>
           <DocumentCardPreview {...documentPreviewProps} />
-          <DocumentCardTitle title={title} shouldTruncate={true}/>
-          <DocumentCardDetails styles={documentCardDetails}>{description}</DocumentCardDetails>
+          <DocumentCardDetails>
+            <DocumentCardTitle title={title} shouldTruncate={true} />
+            <DocumentCardDetails styles={documentCardDetails}>{description}</DocumentCardDetails>
+          </DocumentCardDetails>
         </DocumentCard>
       </Stack>
     </>

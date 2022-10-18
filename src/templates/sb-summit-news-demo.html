@@ -12,12 +12,26 @@
 </content>
 
 <content id="template" type="x-handlebars-template">
+  <style>
+    .cardsFlex {
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      align-content: flex-start;
+  
+      column-gap: 0.5em;
+      row-gap:16px;
+      max-height: 1500;
+    }
+  </style>
   <hello-wc></hello-wc>
 
   {{#if dsData.items}}
-    {{#each dsData.items}}
-      <card-wc title="{{Title}}" author="{{AuthorOWSUSER}}" image-url="{{PictureThumbnailURL}}" description="{{Description}}" link-url="{{Path}}"></card-wc>
-    {{/each}}
+    <div class="cardsFlex">
+      {{#each dsData.items}}
+        <card-wc title="{{Title}}" author="{{AuthorOWSUSER}}" image-url="{{PictureThumbnailURL}}" description="{{Description}}" link-url="{{Path}}"></card-wc>
+      {{/each}}
+    </div>
   {{/if}}
 </content>
 
