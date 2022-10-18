@@ -1,6 +1,5 @@
 import { IWebComponentProvider, IWebComponentDefinition } from '@valo/extensibility';
-import { HelloComponentWC, SpinnerWC } from './components';
-import { CardWC } from './components/CardComponent';
+import { HelloComponentWC, SpinnerWC, CardWC, NewsCardsWC } from './components';
 
 export class ValoWebComponentsLibrary implements IWebComponentProvider {
 
@@ -20,6 +19,10 @@ export class ValoWebComponentsLibrary implements IWebComponentProvider {
       {
         name: 'card-wc',
         class: CardWC
+      },
+      {
+        name: 'news-containers-wc',
+        class: NewsCardsWC
       }
     ];
   }

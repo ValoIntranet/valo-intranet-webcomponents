@@ -1,7 +1,5 @@
-export interface ICardComponentProps {
-  title: string;
-  imageUrl: string;
-  linkUrl: string;
-  description: string;
-  author: any;
+import { INewsItem } from "../../models/INewsItem";
+
+export interface ICardComponentProps extends INewsItem {
+
 }

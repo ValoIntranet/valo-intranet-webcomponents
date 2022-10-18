@@ -5,7 +5,7 @@ export const documentCardStyles: IDocumentCardStyles = {
   root: {
     boxShadow: "0 2px 5px rgba(0, 0, 0, 0.1)",
     borderColor:  undefined,
-    maxWidth: 284,
+    width: 284,
     height: 304,
     borderRadius: 8,
     overflow: "hidden",
@@ -13,6 +13,7 @@ export const documentCardStyles: IDocumentCardStyles = {
       borderRadius: 8,
       border: "unset",
     },
+    marginRight: "5px"
   }
 };
 

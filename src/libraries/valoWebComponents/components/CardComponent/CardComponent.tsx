@@ -3,7 +3,6 @@ import { Stack, DocumentCardDetails, DocumentCard, DocumentCardTitle, ImageFit, 
 import { ICardComponentProps } from "./ICardComponentProps";
 import { documentCardStyles, documentCardDetails } from './CardComponentStyles';
 
-
 export const CardComponent: React.FunctionComponent<ICardComponentProps> = (props: React.PropsWithChildren<ICardComponentProps>) => {
   const { title, description, imageUrl, linkUrl } = props;
   
