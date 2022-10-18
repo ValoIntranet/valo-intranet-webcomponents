@@ -5,7 +5,6 @@ import { documentCardStyles, documentCardDetails } from './CardComponentStyles';
 
 export const CompactCardComponent: React.FunctionComponent<ICardComponentProps> = (props: React.PropsWithChildren<ICardComponentProps>) => {
   const { title, description, imageUrl, linkUrl } = props;
-  debugger;
   const documentPreviewProps: IDocumentCardPreviewProps = {
     previewImages: [
       {
