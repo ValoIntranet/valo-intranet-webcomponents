@@ -12,7 +12,6 @@ export class SpinnerWC extends BaseWebComponent {
   }
 
   public async connectedCallback() {
-    // You can use this._ctx here to access current Web Part context
     const customComponent = <Spinner size={SpinnerSize.large} />;
     ReactDOM.render(customComponent, this);
   }

@@ -13,7 +13,6 @@ export class CardWC extends BaseWebComponent {
   }
 
   public async connectedCallback() {
-    // You can use this._ctx here to access current Web Part context
     const cardProps: ICardComponentProps = this.resolveAttributes() as ICardComponentProps;
     
     const customComponent = <CardComponent {...cardProps} />;

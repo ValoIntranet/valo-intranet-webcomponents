@@ -1,0 +1,25 @@
+<content id="metadata" type="x-handlebars-metadata">
+  {
+    "fields": ["Path", "AuthorOWSUSER", "Title", "BannerImageUrlOWSURLH", "PictureThumbnailURL", "Description", "ListID", "ListItemID", "UniqueId", "SPWebUrl", "LayoutWebpartsContentOWSHTML", "CreatedBy", "RelatedHubSites", "NormUniqueId","ValoAuthorByLine"],
+    "query": "(ContentTypeId:0x0101009D1CB255DA76424F860D91F20E6C41180065789619A4EFB44992AF42CEEBB13C9A02* OR (PromotedState:1 OR PromotedState:2)) AND -ValoHighlightOWSBOOL:1 AND NOT(ValoExpirationDate&lt;{Today})",
+    "refinementFilters": "ValoNewsPublishDate:range(min,{Now},to=\"le\")",
+    "sorting": "ValoNewsPublishDate:descending",
+    "totalResults": 20,
+    "mobileResults": 1,
+    "skipResults": 0,
+    "parameters": []
+  }
+  </content>
+  
+  <content id="template" type="x-handlebars-template">
+    <hello-wc></hello-wc>
+  
+    {{#if dsData.items}}
+      <pre>{{JSONstringify this 2}}</pre>
+    {{/if}}
+  </content>
+  
+  <content id="placeholder" type="x-handlebars-template">
+    <spinner-wc></spinner-wc>
+  </content>
+  

@@ -14,7 +14,7 @@ export class HelloComponentWC extends BaseWebComponent {
     // You can use this._ctx here to access current Web Part context
     const name = this._ctx.pageContext.user.displayName;
     
-    const customComponent = <HelloComponent name={name} />;
+    const customComponent = <div>Hello: {name}</div>;//<HelloComponent name={name} />;
     ReactDOM.render(customComponent, this);
   }
 }
